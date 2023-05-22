@@ -1,6 +1,6 @@
 {
-  "name": "nestjs-papr",
-  "version": "0.0.1a",
+  "name": "nest-papr",
+  "version": "0.0.2a",
   "description": "Papr integration for NestJS",
   "author": "Vitaliy Grusha",
   "keywords": [
