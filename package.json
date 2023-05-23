@@ -1,5 +1,5 @@
 {
-  "name": "nest-papr",
+  "name": "nestjs-papr",
   "version": "0.0.2a",
   "description": "Papr integration for NestJS",
   "author": "Vitaliy Grusha",
