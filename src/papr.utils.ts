@@ -10,14 +10,14 @@ import {
 
 export function getModelToken(model: string, connectionName?: string) {
   if (connectionName === undefined) {
-    return `${model}Model`;
+    return `${model}PaprModel`;
   }
-  return `${getConnectionToken(connectionName)}/${model}Model`;
+  return `${getConnectionToken(connectionName)}/${model}PaprModel`;
 }
 
 export function getConnectionToken(name?: string) {
   return name && name !== DEFAULT_DB_CONNECTION
-    ? `${name}Connection`
+    ? `${name}PaprConnection`
     : DEFAULT_DB_CONNECTION;
 }
 
@@ -29,7 +29,7 @@ export function getPaprToken(name?: string) {
 
 export function getModuleOptionsToken(name?: string) {
   return name && name !== DEFAULT_MODULE_OPTIONS
-    ? `${name}ModuleOptions`
+    ? `${name}PaprModuleOptions`
     : DEFAULT_MODULE_OPTIONS;
 }
 
