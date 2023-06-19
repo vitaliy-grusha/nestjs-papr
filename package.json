@@ -1,6 +1,6 @@
 {
   "name": "nestjs-papr",
-  "version": "0.0.4a",
+  "version": "0.0.5a",
   "description": "Papr integration for NestJS",
   "author": "Vitaliy Grusha",
   "keywords": [
@@ -84,8 +84,8 @@
     "testEnvironment": "node"
   },
   "peerDependencies": {
-    "@nestjs/common": "^10.0.2",
-    "@nestjs/core": "^10.0.2",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
     "mongodb": "^5.0.0",
     "papr": "^13.1.0"
   },
