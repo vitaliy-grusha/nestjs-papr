@@ -245,7 +245,7 @@ export class PaprCoreModule implements OnApplicationShutdown {
   }
 
   async onApplicationShutdown() {
-    const connection = this.moduleRef.get<any>(this.connectionName);
+    const connection = this.moduleRef.get<MongoClient>(this.connectionName);
     connection && (await connection.close());
   }
 }
