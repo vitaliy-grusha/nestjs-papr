@@ -14,6 +14,7 @@ Supports:
 * passing custom database options
 * passing custom collection options
 * sync and async configuration
+* automatic indexes creation
 
 ## Getting started
 
@@ -73,13 +74,14 @@ export const UserSchema = schema(
 );
 export type UserDoc = (typeof UserSchema)[0];
 export type UserProps = Omit<UserDoc, '_id' | 'createdAt' | 'updatedAt'>;
+export type UserCollection = 'users'
 export const UserModelDef = model(UserCollection, UserSchema, { 
   indexes: [
-    // Optional indexes here (IndexDescription[] type);
+    // Optional indexes here (IndexDescription[] type in mongodb);
   ],
-  collectionOptions: [
-    // Optional collectionOptions here (CollectionOptions type);
-  ] 
+  collectionOptions: {
+    // Optional collectionOptions here (CollectionOptions type in mongodb);
+  }
 });
 
 ```
@@ -150,7 +152,7 @@ export interface PaprModuleOptions {
   // Custom options for papr instance
   paprOptions?: ModelOptions;
   
-  // Number of attepts to connect to database
+  // Number of attempts to connect to database
   retryAttempts?: number;
   
   // Number of delay between attempts
